@@ -1,0 +1,272 @@
+﻿=== terrain/objects ===
+    012345678901234567890123456789012345
+ 0  **********.....................r....
+ 1  *********...........T...T.........T.
+ 2  *********t.r....tT........t..Tt.....
+ 3  *********.....g.....T...M.......M...
+ 4  T********.p.......t.............g...
+ 5  ***M****....p............t........t.
+ 6  *t*g****..T..T..........T...C..T....
+ 7  **o*****....................H.......
+ 8  *T******r......#.........o.+.....M..
+ 9  ********,.#.......,#,,r,...+........
+10  *g***#**,,..T.#,,d,,,,,,,,+.....M...
+11  ********,,,.r,,,,,t,,t,,,+T.....g...
+12  ********T#,.r,,M,t,,,,,,g,........r.
+13  *T****rTr,,,,,,g,,,,,,o+,,.......t..
+14  *t******,r,,#,#,r,,C,,,+,,....T.....
+15  ******#*,,,,,r,,,,,,,,+,,,..........
+16  ***M****,,,r,,,,,#,+,+,,,.........T.
+17  *o*g****,,#,,,,#,,,+,o,M,...........
+18  *t+**t**..,,,r,,,,,+tg,g.......t....
+19  **+***T*..r,=,,+g++,,,r,............
+20  **+**o**,..,=,,+,,,,,,,.......T..t..
+21  *+*****..T..=,,+,,,#................
+22  *+o***T.....=t,+......r#............
+23  **+**r......=..+.....TT...#.........
+24  ..+.M.....p.=.+.........#....#...g..
+25  ..+.+........o+..T.T.......T...r....
+26  ...++.......++....................T.
+27  ..T.+......+...t......T........#...:
+28  ....+...C.+....g........r..:::::::#:
+29  ...t.+..H+.......T.T......::d::::o::
+30  ......+++.to..............:T::a:::::
+31  ....d........M....T..t...::o::g::::t
+32  .....t..........p........:g::::::t::
+33  ...........t.......o.....::#::::tgt:
+34  .....p......d...r.....t..:::t:T::t::
+35  ..........T..............:::::::::::
+
+=== passability (# blocked, . reachable, A action, ! unreachable) ===
+    012345678901234567890123456789012345
+ 0  ....................#...............
+ 1  .................#...........#......
+ 2  .........A......A........#A...A..#..
+ 3  ..............A.........A.......A...
+ 4  ....#.....A.......A.............A...
+ 5  ...A........A............A.#####..A.
+ 6  .A.A......................##A##.....
+ 7  ..A...........####..........A....##.
+ 8  ....###......###!####....A.......A..
+ 9  ...####...###!!#!!!###...........#..
+10  .A...###..#......A........#.....A...
+11  .......####.#...#.A..A..........A...
+12  .......######.#A.A......A...........
+13  .#....###!#####A..###.A..........A..
+14  .A...####!###!##!##A##..............
+15  ....###.#!##!###!#..................
+16  ...A....####!######.....#...........
+17  .A.A......###..###...A.A............
+18  .A...A#.............AA.A.......A....
+19  ......#.........A.............#.....
+20  .....A...........#####...........A..
+21  .................###.####...........
+22  ..A..........A.......########.......
+23  .....#...............##########.....
+24  ....A.....A........#....########.A..
+25  .............A......................
+26  ..................................#.
+27  .......###.....A................####
+28  ......##A##..#.A.#...............###
+29  ...A....A..................#A....A..
+30  ..........AA.##...............A.....
+31  ....A........A....#..A.....A..A....A
+32  .####A..........A.........A......A..
+33  ...........A.......A............AAA.
+34  .....A....#.A.........A.....A....A..
+35  ..........##........................
+
+=== placed objects ===
+  (5,10) uid 1 group 3 index 12            ridge A (snow)
+  (9,12) uid 2 group 3 index 6            ridge B
+  (12,14) uid 3 group 3 index 7            ridge C
+  (15,17) uid 4 group 3 index 36            ridge D
+  (19,21) uid 5 group 3 index 37            ridge E
+  (23,22) uid 6 group 3 index 6            ridge F
+  (26,23) uid 7 group 3 index 7            ridge G
+  (29,24) uid 8 group 3 index 6            ridge H
+  (34,28) uid 9 group 3 index 0            ridge I (desert side)
+  (15,8) uid 10 group 3 index 7            vale north wall K
+  (19,9) uid 11 group 3 index 6            vale north wall L
+  (6,15) uid 12 group 3 index 13            ridge west flank (snow)
+  (10,17) uid 13 group 3 index 36            ridge west flank (dirt)
+  (10,9) uid 14 group 3 index 40            ridge west flank north
+  (8,8) uid 15 group 4 index 11            flank pocket rock
+  (8,13) uid 16 group 4 index 24            flank pocket rock 2
+  (9,14) uid 17 group 4 index 25            flank pocket rock 3
+  (12,10) uid 18 group 5 index 2            ridge filler tree
+  (12,11) uid 19 group 4 index 2            ridge filler rock
+  (12,12) uid 20 group 4 index 4            ridge filler rock 2
+  (26,11) uid 21 group 5 index 2            NE gate tree
+  (22,9) uid 22 group 4 index 6            NE gate rock
+  (31,27) uid 23 group 3 index 60            pass C dune
+  (8,28) uid 24 group 8 index 0            Highmarch (basement)
+  (8,28) uid 24 group 18 index 0  [action]  Highmarch
+  (7,28) uid 24 group 9 index 0            Highmarch (left flag)
+  (9,28) uid 24 group 9 index 1            Highmarch (right flag)
+  (8,29) uid 25 group 17 index 0  [action]  hero Sir Aldric
+  (13,31) uid 26 group 12 index 48  [action]  Blue sawmill
+  (4,24) uid 27 group 12 index 5  [action]  Blue ore mine
+  (13,25) uid 28 group 16 index 24  [action]  water wheel
+  (11,33) uid 29 group 14 index 9  [action]  treasure chest
+  (15,27) uid 30 group 14 index 9  [action]  treasure chest
+  (15,28) uid 31 group 19 index 57  [action]  home chest guard
+  (10,30) uid 32 group 14 index 0  [action]  resource pile
+  (5,32) uid 33 group 14 index 0  [action]  resource pile
+  (3,29) uid 34 group 14 index 2  [action]  resource pile
+  (13,22) uid 35 group 14 index 6  [action]  resource pile
+  (4,31) uid 36 group 11 index 0  [action]  peasant hut
+  (12,34) uid 37 group 11 index 13  [action]  archer's house
+  (16,32) uid 38 group 13 index 11  [action]  gazebo
+  (10,24) uid 39 group 13 index 6  [action]  fountain
+  (5,34) uid 40 group 13 index 3  [action]  faerie ring
+  (11,30) uid 41 group 16 index 22  [action]  sign
+  (1,10) uid 42 group 19 index 57  [action]  pass B guard
+  (3,5) uid 43 group 12 index 12  [action]  crystal mine
+  (3,6) uid 44 group 19 index 21  [action]  crystal mine guard
+  (3,16) uid 45 group 12 index 14  [action]  western gold mine
+  (3,17) uid 46 group 19 index 21  [action]  western gold mine guard
+  (5,20) uid 47 group 16 index 5  [action]  windmill
+  (2,22) uid 48 group 16 index 45  [action]  observation tower
+  (1,14) uid 49 group 14 index 9  [action]  treasure chest
+  (1,6) uid 50 group 14 index 4  [action]  resource pile
+  (1,18) uid 51 group 14 index 6  [action]  resource pile
+  (5,18) uid 52 group 14 index 0  [action]  resource pile
+  (1,17) uid 53 group 16 index 22  [action]  sign
+  (2,7) uid 54 group 16 index 1  [action]  graveyard
+  (14,3) uid 55 group 19 index 48  [action]  north corridor guard
+  (10,4) uid 56 group 13 index 12  [action]  witch doctor's hut
+  (12,5) uid 57 group 13 index 20  [action]  tree of knowledge
+  (9,2) uid 58 group 14 index 6  [action]  resource pile
+  (16,2) uid 59 group 14 index 2  [action]  resource pile
+  (18,4) uid 60 group 14 index 9  [action]  treasure chest
+  (19,14) uid 61 group 8 index 5            Marketstead (basement)
+  (19,14) uid 61 group 18 index 1  [action]  Marketstead
+  (18,14) uid 61 group 9 index 12            Marketstead (left flag)
+  (20,14) uid 61 group 9 index 13            Marketstead (right flag)
+  (15,12) uid 62 group 12 index 34  [action]  the King's Mine
+  (15,13) uid 63 group 19 index 58  [action]  King's Mine guard
+  (23,17) uid 64 group 12 index 33  [action]  gems mine
+  (23,18) uid 65 group 19 index 58  [action]  gems mine guard
+  (21,17) uid 66 group 16 index 33  [action]  trading post
+  (21,18) uid 67 group 19 index 57  [action]  trading post guard
+  (17,10) uid 68 group 11 index 17  [action]  rogue wagon camp
+  (14,14) uid 69 group 3 index 61            hollow filler
+  (16,14) uid 70 group 4 index 25            hollow filler
+  (13,15) uid 71 group 4 index 24            hollow filler
+  (15,15) uid 72 group 7 index 106            hollow filler
+  (22,13) uid 73 group 16 index 41  [action]  magic garden
+  (18,11) uid 74 group 14 index 6  [action]  resource pile
+  (17,12) uid 75 group 14 index 3  [action]  resource pile
+  (21,11) uid 76 group 14 index 4  [action]  resource pile
+  (20,18) uid 77 group 14 index 9  [action]  treasure chest
+  (16,19) uid 78 group 19 index 14  [action]  pass A guard
+  (24,12) uid 79 group 19 index 57  [action]  NE gate guard
+  (28,6) uid 80 group 8 index 0            Ironvale (basement)
+  (28,6) uid 80 group 18 index 0  [action]  Ironvale
+  (27,6) uid 80 group 9 index 2            Ironvale (left flag)
+  (29,6) uid 80 group 9 index 3            Ironvale (right flag)
+  (28,7) uid 81 group 17 index 7  [action]  hero 
+  (33,8) uid 82 group 12 index 48  [action]  Green sawmill
+  (24,3) uid 83 group 12 index 5  [action]  Green ore mine
+  (32,3) uid 84 group 12 index 9  [action]  Green gold mine
+  (32,4) uid 85 group 19 index 57  [action]  Green gold mine guard
+  (25,8) uid 86 group 16 index 41  [action]  Green magic garden
+  (26,2) uid 87 group 14 index 9  [action]  treasure chest
+  (30,2) uid 88 group 14 index 0  [action]  resource pile
+  (34,5) uid 89 group 14 index 2  [action]  resource pile
+  (25,5) uid 90 group 14 index 0  [action]  resource pile
+  (32,10) uid 91 group 12 index 6  [action]  sulfur mine
+  (32,11) uid 92 group 19 index 57  [action]  sulfur mine guard
+  (33,13) uid 93 group 14 index 9  [action]  treasure chest
+  (31,18) uid 94 group 14 index 2  [action]  resource pile
+  (33,20) uid 95 group 14 index 6  [action]  resource pile
+  (19,33) uid 96 group 16 index 22  [action]  sign
+  (22,34) uid 97 group 14 index 9  [action]  treasure chest
+  (21,31) uid 98 group 14 index 10  [action]  campfire (south strip)
+  (26,32) uid 99 group 19 index 58  [action]  desert gate guard
+  (33,29) uid 100 group 16 index 31  [action]  sphinx
+  (30,30) uid 101 group 10 index 24  [action]  Endless Purse of Gold
+  (30,31) uid 102 group 19 index 58  [action]  Endless Purse guard
+  (27,31) uid 103 group 16 index 30  [action]  skeleton remains
+  (28,29) uid 104 group 11 index 9  [action]  desert tent (nomads)
+  (35,31) uid 105 group 14 index 12  [action]  campfire (desert east)
+  (28,34) uid 106 group 14 index 9  [action]  treasure chest
+  (33,33) uid 107 group 19 index 57  [action]  hoard guard
+  (33,32) uid 108 group 14 index 6  [action]  resource pile
+  (34,33) uid 109 group 14 index 6  [action]  resource pile
+  (32,33) uid 110 group 14 index 9  [action]  treasure chest
+  (33,34) uid 111 group 14 index 9  [action]  treasure chest
+  (33,24) uid 112 group 19 index 61  [action]  pass C guard
+  (17,29) uid 166 group 5 index 14            deco
+  (17,25) uid 167 group 5 index 4            deco
+  (2,27) uid 168 group 5 index 5            deco
+  (10,35) uid 169 group 5 index 2            deco
+  (6,25) uid 170 group 7 index 13            deco
+  (9,31) uid 171 group 7 index 21            deco
+  (12,28) uid 172 group 7 index 7            deco
+  (16,34) uid 173 group 4 index 4            deco
+  (3,33) uid 174 group 7 index 5            deco lake
+  (14,29) uid 175 group 7 index 20            deco
+  (6,22) uid 176 group 5 index 36            deco
+  (18,31) uid 177 group 5 index 0            deco forest
+  (19,29) uid 178 group 5 index 16            deco
+  (1,13) uid 179 group 5 index 30            deco
+  (6,19) uid 180 group 5 index 32            deco
+  (5,8) uid 181 group 7 index 38            deco
+  (6,13) uid 182 group 4 index 11            deco
+  (1,8) uid 183 group 5 index 34            deco
+  (5,23) uid 184 group 4 index 14            deco
+  (0,4) uid 185 group 5 index 45            deco
+  (10,6) uid 186 group 5 index 64            deco
+  (13,6) uid 187 group 5 index 66            deco
+  (17,2) uid 188 group 5 index 2            deco
+  (20,3) uid 189 group 5 index 4            deco
+  (11,2) uid 190 group 4 index 6            deco
+  (20,1) uid 191 group 5 index 14            deco
+  (24,1) uid 192 group 5 index 5            deco
+  (34,1) uid 193 group 5 index 16            deco
+  (31,0) uid 194 group 4 index 4            deco
+  (14,10) uid 195 group 3 index 61            deco
+  (20,11) uid 196 group 7 index 106            deco
+  (17,20) uid 197 group 7 index 111            deco
+  (22,19) uid 198 group 4 index 24            deco
+  (13,18) uid 199 group 4 index 25            deco
+  (21,20) uid 200 group 7 index 121            deco
+  (31,6) uid 201 group 5 index 2            deco
+  (24,6) uid 202 group 5 index 4            deco
+  (34,12) uid 203 group 4 index 2            deco
+  (29,2) uid 204 group 5 index 14            deco
+  (30,14) uid 205 group 5 index 38            deco
+  (34,16) uid 206 group 5 index 16            deco
+  (30,20) uid 207 group 5 index 2            deco
+  (29,33) uid 208 group 7 index 87            deco
+  (31,29) uid 209 group 7 index 90            deco
+  (35,34) uid 210 group 7 index 92            deco
+  (27,30) uid 211 group 5 index 57            deco
+  (30,34) uid 212 group 5 index 58            deco
+  (34,26) uid 213 group 5 index 54            deco
+  (27,33) uid 214 group 3 index 58            deco dune
+  (19,25) uid 215 group 5 index 14            deco
+  (22,27) uid 216 group 5 index 4            deco
+  (18,27) uid 217 group 7 index 20            deco
+  (24,28) uid 218 group 4 index 6            deco
+  (21,25) uid 219 group 7 index 21            deco
+  (9,21) uid 220 group 5 index 36            deco
+  (8,24) uid 221 group 7 index 13            deco
+  (10,19) uid 222 group 4 index 4            deco
+  (22,22) uid 223 group 4 index 6            pocket filler
+  (22,23) uid 224 group 5 index 5            pocket filler
+  (8,12) uid 225 group 5 index 34            pocket filler
+  (7,13) uid 226 group 5 index 32            ridge deco
+  (11,16) uid 227 group 4 index 2            ridge deco
+  (17,16) uid 228 group 3 index 40            ridge deco
+  (21,23) uid 229 group 5 index 0            ridge deco
+  (27,25) uid 230 group 5 index 36            ridge deco
+  (31,25) uid 231 group 4 index 4            ridge deco
+  (24,24) uid 232 group 3 index 8            ridge deco
+placed objects: 188
+reachability: all action objects reachable from Blue start
+saved: kings_ransom.fh2m
+round-trip load: OK (version 13, width 36, tiles 1296)
+round-trip byte comparison: IDENTICAL
