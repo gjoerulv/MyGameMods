@@ -1,0 +1,925 @@
+=== terrain/objects ===
+    012345678901234567890123456789012345678901234567890123456789012345678901
+ 0  ,t,,,,,,,,,,,,,,,,,,xxxxxxx,,,,,,,,ag,,,,,,,,xxxxxxx,,,,,,,,,,,,,,,,,,t,
+ 1  ,,,,,,r,T,,,,,,,,T,,xxx#xxx,r,,,,,,,,,,,,,,r,xxx#xxx,,T,,,,,,,,T,r,,,,,,
+ 2  ,,,,,.T.......,,t,t,xxxxxxx,,,,,T,,,,,,T,,,,,xxxxxxx,t,t,,.......T.,,,,,
+ 3  ,,M,,.........,,,,,,xxxxxxxT,M,,,,,,,,,,,,M,Txxxxxxx,,,,,,.........,,M,,
+ 4  ,,g,.........M.,,,,Txxx#xxx,,g,,,,,C,,r,,,g,,xxx#xxxT,,,,.M.........,g,,
+ 5  ,,,.............,,,,xxxxxxxo,,,,,,,++,,,,,,,oxxxxxxx,,,,.............,,,
+ 6  ,,,.............,,,,xxxgxxx++++++++++++++++++xxxgxxx,,,,.............,,,
+ 7  ,,,T.....C......,,,,x++++++,,,,d,+,,,,+,d,,,,++++++x,,,,......C.....T,,,
+ 8  ,,,......H......T,p,+xxxxxxT,,,,,+,M,,+,,,,,Txxxxxx+,p,T......H......,,,
+ 9  ,,p......+....t.,,,+xxx#xxx,,,,,,+,g,,+,,,,,,xxx#xxx+,,,.t....+......p,,
+10  ,,,,.....++++++++++Txxxxxxx,,o,t,+,,,,+,t,o,,xxxxxxxT++++++++++.....,,,,
+11  ,,,,,....+....o,,,,,xxxxxxx,T,,,,+,,,,+,,,,T,xxxxxxx,,,,,o....+....,,,,,
+12  ,ro,,....+....,,M,,,xxx#xxx,,,,,,+,p,,+,,,,,,xxx#xxx,,,M,,....+....,,or,
+13  ,,,,,,,,,+,,,,,,g,r,xxxxxxxp,,tt,+,,,,+,tt,,pxxxxxxx,r,g,,,,,,+,,,,,,,,,
+14  ,,,,,,,,,+,,,,,,,,,,xxxxxxx,,,g,,+,,,,+,,g,,,xxxxxxx,,,,,,,,,,+,,,,,,,,,
+15  ,,,,M,,,,+,,,,,,o,,,xxx#xxxt,,,,,+,M,,+,,,,,txxx#xxx,,,o,,,,,,+,,,,M,,,,
+16  ,T,,,,,t,+T,,,,,,=o,xxxxxxx,,,,t,+,g,,+,t,,,,xxxxxxx,o=,,,,,,T+,t,,,,,T,
+17  ,,,,,T,,,+,,T,,d,=,,xxxxxxT,,p,,,+,,,,+,,,p,,Txxxxxx,,=,d,,T,,+,,,T,,,,,
+18  ,,,,,,,,,+,r,,,,,=,,xxx#xxx,,,,,,+,,,,+,,,,,,xxx#xxx,,=,,,,,r,+,,,,,,,,,
+19  ,,,,,,t,,+,,,,,d,=,,xxxxxxx,,,a,,+,,,,+,,a,,,xxxxxxx,,=,d,,,,,+,,t,,,,,,
+20  xagxxxgxx+xxTxxxx=xxxxxxxxxxxxgxx+xxxx+xxgxxxxxxxxxxxx=xxxxTxx+xxgxxxgax
+21  xxxxxxxxx+xxxxxxxxxxxxx#xxxxxxxxxx+xx+xxxxxxxxxx#xxxxxxxxxxxxx+xxxxxxxxx
+22  xxxxxxxxx+xxxxxxxxxxxxxxxxxxxxxxTxx++xxTxxxxxxxxxxxxxxxxxxxxxx+xxxxxxxxx
+23  rxx#xxTTxgxxx#xxxx#xxTxxxxxx#xxrTTrg+rTTrxx#xxxxxxTxx#xxxx#xxxgxTTxx#xxr
+24  xxxxxxxxx+xxxxxxTxxxxxx#xxxxxxxxxxx++xxxxxxxxxxx#xxxxxxTxxxxxx+xxxxxxxxx
+25  xxxxxxxxx+xxxxxxxxxxxxxxxxrxxxxxxxx+xxxxxxxxxrxxxxxxxxxxxxxxxx+xxxxxxxxx
+26  xxxTxxxxx+xxxxxxxxxxxxxxxxxxxrxxoxx+xxxxxxrxxxxxxxxxxxxxxxxxxx+xxxxxTxxx
+27  ,t,,,,,,,+,,,,T,,,,,xxx#xxx,,,xxxxx+xxxxxx,,,xxx#xxx,,,,,T,,,,+,,,,,,,t,
+28  ,,,,,,,xx+xoxx,,,,,,xxxxxxx,,xxxxxx+xxxxxxx,,xxxxxxx,,,,,,xxox+xx,,,,,,,
+29  ,,,,xMxxt+xxxxxxxT,,xxxxxxx,xMxxxxx+xxxxxxMx,xxxxxxx,,Txxxxxxx+txxMx,,,,
+30  ,,,,xgxxx+xxxxpxx,,txxx#xxT,tgt++++++++++tgt,Txx#xxxt,,xxpxxxx+xxxgx,,,,
+31  ,t,,,,,xx+xoTx,,d,,,xxxxxxx,xaxxx+xxxxxxxxax,xxxxxxx,,,d,,xTox+xx,,,,,t,
+32  ,,r,,,,,,+,,,,,,,,p,xxxxxxxxxxxx+xxxxxxxxxxxxxxxxxxx,p,,,,,,,,+,,,,,,r,,
+33  ,,,,,,C,,+,,,t,,,++,Txx#xxxxxxrx+xxxxxxxxrxxxxxx#xxT,++,,,t,,,+,,C,,,,,,
+34  ,,,,,,+,,+,,,,+++,,+xxxxxxxx,,,,+xxCxxxx,,,,xxxxxxxx+,,+++,,,,+,,+,,,,,,
+35  ,a,,,,,+++,p,+,,M,,,+++g++++++++++++++++++++++++g+++,,,M,,+,p,+++,,,,,a,
+36  ,,g,,,,,,+++++,,g,,+xxxxxx,,,,o,,,x+xx,,,o,,,,xxxxxx+,,g,,+++++,,,,,,g,,
+37  ,,,,r,,,,+,,,,+,,,+,xxxxxxxx,,,,xxx+xxxx,,,,xxxxxxxx,+,,,+,,,,+,,,,r,,,,
+38  ,,,,,,,,,+,,,t,+++,,Txx#xxxxxxxxxxx+xxxxxxxxxxxx#xxT,,+++,t,,,+,,,,,,,,,
+39  ,,r,,,,,,+,,,,,,,,p,xxxxxxxxTxxxxxx+xxxxxxxTxxxxxxxx,p,,,,,,,,+,,,,,,r,,
+40  ,t,,,,,xx+xoTx,,d,,,xxxxxxx,xxxxxxx+xxxxxxxx,xxxxxxx,,,d,,xTox+xx,,,,,t,
+41  ,,,,xxxxx+xxxxpxx,,txxx#xxT,xxxxxrx+xxrxxxxx,Txx#xxxt,,xxpxxxx+xxxxx,,,,
+42  ,,,,xMxxt+xxxxxxxT,,xxxxxxx,xMxxxxx+xxxxxxMx,xxxxxxx,,Txxxxxxx+txxMx,,,,
+43  ,,,,,g,xx+xoxx,,,,,,xxxxxxx,tgt++++++++++tgt,xxxxxxx,,,,,,xxox+xx,g,,,,,
+44  ,t,,,,,,,+,,,,T,,,,,xxx#xxx,,axxxxx+xxxxxxa,,xxx#xxx,,,,,T,,,,+,,,,,,,t,
+45  xxxxxxxxx+xxxxxxxxxxxxxxxTxxxrxxoxx+xxxxxxrxxxTxxxxxxxxxxxxxxx+xxxxxxxxx
+46  xxxxxxxxx+xxxxxxxxxxxxxxxxrxxxxxxxx++xxxxxxxxrxxxxxxxxxxxxxxxx+xxxxxxxxx
+47  xxxxxxxxx+xxxxxxxxxxxxx#xxxxxxxxxxx++xxxxxxxxxxx#xxxxxxxxxxxxx+xxxxxxxxx
+48  rxx#xxTTxgxxx#xxxx#xxTTxxxxx#xxrTTrg+rTTrxx#xxxxxTTxx#xxxx#xxxgxTTxx#xxr
+49  xxxxxxxxx+xxxxxxxxxxxxxxxxxxxxxxTxx++xxTxxxxxxxxxxxxxxxxxxxxxx+xxxxxxxxx
+50  xrxxxxxx+xxxxxxTxxxxxxx#xxxxTxTxxxx++xxxxTxTxxxx#xxxxxxxTxxxxxx+xxxxxxrx
+51  xagxxxgx+xxxTxxxx=xxxxxxxxxxxxgxxx+xx+xxxgxxxxxxxxxxxx=xxxxTxxx+xgxxxgax
+52  ,,,,,,t,+,,,,,,d,=,,xxxxxxx,,,a,,+,,,,+,,a,,,xxxxxxx,,=,d,,,,,,+,t,,,,,,
+53  ,,,,,,,,+,,r,,,,,=,,xxx#xxx,,,,,,+,,,,+,,,,,,xxx#xxx,,=,,,,,r,,+,,,,,,,,
+54  ,,,,,T..+...T.,d,=,,xxxxxxT,,p,,,+,M,,+,,,p,,Txxxxxx,,=,d,.T...+..T,,,,,
+55  ,T,,,..t+.T...,,,=o,xxxxxxx,,,,t,+,g,,+,t,,,,xxxxxxx,o=,,,...T.+t..,,,T,
+56  ,,,,M..+.......,o,,,xxx#xxxt,,,,,+,,,,+,,,,,txxx#xxx,,,o,.......+..M,,,,
+57  ,,,...+.........,,,,xxxxxxx,,,g,,+,p,,+,,g,,,xxxxxxx,,,,.........+...,,,
+58  ,,,...+.......M.,,,,xxxxxxxp,,tt,+,,,,+,tt,,pxxxxxxx,,,,.M.......+...,,,
+59  ,ro...+..C......,,M,xxx#xxx,,,,,,+,,,,+,,,,,,xxx#xxx,M,,......C..+...or,
+60  ,,,....++H....o.,,g,xxxxxxx,,,,,,+,M,,+,,,,,,xxxxxxx,g,,.o....H++....,,,
+61  ,,,......+......,,,Txxxxxxx,,o,t,+,g,,+,t,o,,xxxxxxxT,,,......+......,,,
+62  ,,p,.....+....t,,,,,xxx#xxx,,,,,,+,,,,+,,,,,,xxx#xxx,,,,,t....+.....,p,,
+63  ,,,,,.....+...,,T,p,xxxxxxxT,,,,,+,,,,+,,,,,Txxxxxxx,p,T,,...+.....,,,,,
+64  ,,,T,......+..,,,,,,xxxgxxx,,,,d,+,,,,+,d,,,,xxxgxxx,,,,,,..+......,T,,,
+65  ,,,,,,,,,,,,+++++++++++++++++++++,,,,,,+++++++++++++++++++++,,,,,,,,,,,,
+66  ,,,,,,,,,,,,,,,,,,,,xxxxxxxo,,,,+,,,,,,+,,,,oxxxxxxx,,,,,,,,,,,,,,,,,,,,
+67  ,,,,,,,,,,,,,,,,,,,Txxx#xxx,,,,,+,,C,,r+,,,,,xxx#xxxT,,,,,,,,,,,,,,,,,,,
+68  ,,M,,,,,,,,,,,,,,,,,xxxxxxxT,M,,,++++++,,,M,Txxxxxxx,,,,,,,,,,,,,,,,,M,,
+69  ,,g,,,T,,,,,,,,,t,t,xxxxxxx,,g,,T,,,,,,T,,g,,xxxxxxx,t,t,,,,,,,,,T,,,g,,
+70  ,,,,,,r,T,,,,,,,,T,,xxx#xxx,r,,,,,,,,,,,,,,r,xxx#xxx,,T,,,,,,,,T,r,,,,,,
+71  ,t,,,,,,,,,,,,,,,,,,xxxxxxx,,,,,,,,ag,,,,,,,,xxxxxxx,,,,,,,,,,,,,,,,,,t,
+
+=== passability (# blocked, . reachable, A action, ! unreachable) ===
+    012345678901234567890123456789012345678901234567890123456789012345678901
+ 0  .A......#............####..........AA..........####............#......A.
+ 1  .......................###....................###.......................
+ 2  ...#............A.A....###....#............#..###....A.A..............#.
+ 3  ..A..........##.......####...A....###.....A...####........##.........A..
+ 4  ..A..........A.......###.....A...##A##....A.....###.......A..........A..
+ 5  ...........................A................A...........................
+ 6  ...#....###............A........................A............###....#...
+ 7  .......##A##...................A....#...A...................##A##.......
+ 8  .........A......#.A..####..........A...........####..A.#......A.........
+ 9  ..A...........A........###.........A..........###........A...........A..
+10  .......................###...A.A........A.A...###.......................
+11  ..............A..#....####..#..............#..####......#A..............
+12  ..A.............A....###...........A............###....A.............A..
+13  ................A....###...A..AA........AA..A...###....A................
+14  .....#...............####.....A..........A.....####.................#...
+15  ....A...........A......###.A.......A........A.###....##A...........A....
+16  .......A..........A....###.....A...A....A.....###....A..........A.......
+17  ...............A......####...A............A...####......A...............
+18  .....................###........................###.....................
+19  ......A........A.....###......A..........A......###.....A........A......
+20  .AA...A..............####.....A..........A.....####..............A...AA.
+21  .......................###....................###.......................
+22  .####.......########...###.####.#......#.####.###...########.......####.
+23  ...###...A.###....###########......A.......###########....###.A...###...
+24  .....................###..#..................#..###.....................
+25  .....................###........................###.....................
+26  ...#..........#......####.......A..............####......#..........#...
+27  .A.....................###....................###.....................A.
+28  ......#....A...........###....#............#..###...........A......#....
+29  .....A..A.............####...A............A...####.............A..A.....
+30  .....A......#.A....A.###....AAA..........AAA....###.A....A.#......A.....
+31  .A.........A....A....###.....A............A.....###....A....A.........A.
+32  .....###..........A..####......................####..A..........###.....
+33  ....##A##....A.........###........###.........###.........A....##A##....
+34  .................#...............##A##..................#...............
+35  .A.........AA...A......A........................A......A....AA........A.
+36  ..A.............A.............A..........A.............A.............A..
+37  ......................####....................####......................
+38  .............A.......###........................###.......A.............
+39  ..................A..###........................###..A..................
+40  .A.........A....A....####......................####....A....A.........A.
+41  ......#.......A....A...###....#..#....#....#..###...A....A.........#....
+42  .....A..A..............###...A............A...###..............A..A.....
+43  .....A.....A..#.......####..AAA..........AAA..####.......#..A.....A.....
+44  .A...................###.....A............A.....###...................A.
+45  .....................###........A...............###.....................
+46  .....................####......................####.....................
+47  .####.......########..####.####..........####.####..########.......####.
+48  #!!###...A.###....###.#######...#..A...#...#######.###....###.A...###!!#
+49  .#....................####..#..............#..####....................#.
+50  .....................###........................###.....................
+51  .AA...A..............###......A..........A......###..............A...AA.
+52  ......A........A.....####.....A..........A.....####.....A........A......
+53  .......................###....................###.......................
+54  ...............A.......###...A.....A......A...###.......A...............
+55  .....#.A..........A...####.....A...A....A.....####...A#.........A...#...
+56  ....A.........##A....###...A................A...###....A...........A....
+57  ..............##.....###......A....A.....A......###......##.............
+58  ........###...A....#.####..A..AA........AA..A..####...#..A...###........
+59  ..A....##A##......A....###..........#.........###....A......##A##....A..
+60  .........A....A...A....###.........A..........###....A...A....A.........
+61  ......................####...A.A...A....A.A...####......................
+62  ..A...........A......###........................###......A...........A..
+63  ...#............#.A..................................A.#............#...
+64  .......................A.......A........A.......A.......................
+65  ........................................................................
+66  .....................####..A......###.......A..####.....................
+67  ...#...................###....#..##A##.....#..###.....................#.
+68  ..A....................###...A............A...###....................A..
+69  ..A.....#.......A.A...####...A............A...####...A.A.......#.....A..
+70  .....................###........................###.....................
+71  .A...................###.#.........AA.........#.###...................A.
+
+=== placed objects ===
+  (23,1) uid 1 group 3 index 44            wall
+  (23,4) uid 2 group 3 index 45            wall
+  (23,9) uid 3 group 3 index 44            wall
+  (23,12) uid 4 group 3 index 45            wall
+  (23,15) uid 5 group 3 index 44            wall
+  (23,18) uid 6 group 3 index 45            wall
+  (23,21) uid 7 group 3 index 44            wall
+  (23,24) uid 8 group 3 index 45            wall
+  (23,27) uid 9 group 3 index 44            wall
+  (23,30) uid 10 group 3 index 45            wall
+  (23,33) uid 11 group 3 index 44            wall
+  (23,38) uid 12 group 3 index 45            wall
+  (23,41) uid 13 group 3 index 44            wall
+  (23,44) uid 14 group 3 index 45            wall
+  (23,47) uid 15 group 3 index 44            wall
+  (23,50) uid 16 group 3 index 45            wall
+  (23,53) uid 17 group 3 index 44            wall
+  (23,56) uid 18 group 3 index 45            wall
+  (23,59) uid 19 group 3 index 44            wall
+  (23,62) uid 20 group 3 index 45            wall
+  (23,67) uid 21 group 3 index 44            wall
+  (23,70) uid 22 group 3 index 45            wall
+  (48,1) uid 23 group 3 index 45            wall
+  (48,4) uid 24 group 3 index 44            wall
+  (48,9) uid 25 group 3 index 45            wall
+  (48,12) uid 26 group 3 index 44            wall
+  (48,15) uid 27 group 3 index 45            wall
+  (48,18) uid 28 group 3 index 44            wall
+  (48,21) uid 29 group 3 index 45            wall
+  (48,24) uid 30 group 3 index 44            wall
+  (48,27) uid 31 group 3 index 45            wall
+  (48,30) uid 32 group 3 index 44            wall
+  (48,33) uid 33 group 3 index 45            wall
+  (48,38) uid 34 group 3 index 44            wall
+  (48,41) uid 35 group 3 index 45            wall
+  (48,44) uid 36 group 3 index 44            wall
+  (48,47) uid 37 group 3 index 45            wall
+  (48,50) uid 38 group 3 index 44            wall
+  (48,53) uid 39 group 3 index 45            wall
+  (48,56) uid 40 group 3 index 44            wall
+  (48,59) uid 41 group 3 index 45            wall
+  (48,62) uid 42 group 3 index 44            wall
+  (48,67) uid 43 group 3 index 45            wall
+  (48,70) uid 44 group 3 index 44            wall
+  (3,23) uid 45 group 3 index 44            wall
+  (68,23) uid 46 group 3 index 45            wall
+  (13,23) uid 47 group 3 index 45            wall
+  (58,23) uid 48 group 3 index 44            wall
+  (18,23) uid 49 group 3 index 44            wall
+  (53,23) uid 50 group 3 index 45            wall
+  (28,23) uid 51 group 3 index 45            wall
+  (43,23) uid 52 group 3 index 44            wall
+  (0,23) uid 53 group 4 index 36            wall filler
+  (6,23) uid 54 group 5 index 10            wall filler
+  (7,23) uid 55 group 5 index 66            wall filler
+  (21,23) uid 56 group 5 index 10            wall filler
+  (31,23) uid 57 group 4 index 37            wall filler
+  (32,23) uid 58 group 5 index 10            wall filler
+  (33,23) uid 59 group 5 index 64            wall filler
+  (34,23) uid 60 group 4 index 37            wall filler
+  (37,23) uid 61 group 4 index 37            wall filler
+  (38,23) uid 62 group 5 index 64            wall filler
+  (39,23) uid 63 group 5 index 10            wall filler
+  (40,23) uid 64 group 4 index 37            wall filler
+  (50,23) uid 65 group 5 index 10            wall filler
+  (64,23) uid 66 group 5 index 66            wall filler
+  (65,23) uid 67 group 5 index 10            wall filler
+  (71,23) uid 68 group 4 index 36            wall filler
+  (3,48) uid 69 group 3 index 44            wall
+  (68,48) uid 70 group 3 index 45            wall
+  (13,48) uid 71 group 3 index 45            wall
+  (58,48) uid 72 group 3 index 44            wall
+  (18,48) uid 73 group 3 index 44            wall
+  (53,48) uid 74 group 3 index 45            wall
+  (28,48) uid 75 group 3 index 45            wall
+  (43,48) uid 76 group 3 index 44            wall
+  (0,48) uid 77 group 4 index 36            wall filler
+  (6,48) uid 78 group 5 index 10            wall filler
+  (7,48) uid 79 group 5 index 66            wall filler
+  (21,48) uid 80 group 5 index 10            wall filler
+  (22,48) uid 81 group 5 index 64            wall filler
+  (31,48) uid 82 group 4 index 37            wall filler
+  (32,48) uid 83 group 5 index 10            wall filler
+  (33,48) uid 84 group 5 index 64            wall filler
+  (34,48) uid 85 group 4 index 37            wall filler
+  (37,48) uid 86 group 4 index 37            wall filler
+  (38,48) uid 87 group 5 index 64            wall filler
+  (39,48) uid 88 group 5 index 10            wall filler
+  (40,48) uid 89 group 4 index 37            wall filler
+  (49,48) uid 90 group 5 index 64            wall filler
+  (50,48) uid 91 group 5 index 10            wall filler
+  (64,48) uid 92 group 5 index 66            wall filler
+  (65,48) uid 93 group 5 index 10            wall filler
+  (71,48) uid 94 group 4 index 36            wall filler
+  (9,7) uid 95 group 8 index 0            Harrowfield (basement)
+  (9,7) uid 95 group 18 index 12  [action]  Harrowfield
+  (8,7) uid 95 group 9 index 0            Harrowfield (left flag)
+  (10,7) uid 95 group 9 index 1            Harrowfield (right flag)
+  (9,8) uid 96 group 17 index 6  [action]  hero 
+  (13,4) uid 97 group 12 index 48  [action]  NW sawmill
+  (4,15) uid 98 group 12 index 30  [action]  NW ore mine
+  (16,12) uid 99 group 12 index 34  [action]  NW home gold mine
+  (16,13) uid 100 group 19 index 57  [action]  NW home gold mine guard
+  (2,3) uid 101 group 12 index 33  [action]  NW gems mine
+  (2,4) uid 102 group 19 index 14  [action]  NW gems mine guard
+  (15,17) uid 103 group 11 index 0  [action]  NW peasant hut
+  (15,19) uid 104 group 11 index 5  [action]  NW halfling hole
+  (18,8) uid 105 group 13 index 11  [action]  NW gazebo
+  (2,9) uid 106 group 13 index 6  [action]  NW fountain
+  (18,16) uid 107 group 16 index 6  [action]  NW windmill
+  (16,15) uid 108 group 16 index 24  [action]  NW water wheel
+  (2,12) uid 109 group 16 index 41  [action]  NW magic garden
+  (18,2) uid 110 group 14 index 9  [action]  treasure chest
+  (6,19) uid 111 group 14 index 9  [action]  treasure chest
+  (6,20) uid 112 group 19 index 39  [action]  NW chest guard
+  (1,20) uid 113 group 10 index 93  [action]  NW minor artifact
+  (2,20) uid 114 group 19 index 39  [action]  NW artifact guard
+  (16,2) uid 115 group 14 index 0  [action]  resource pile
+  (7,16) uid 116 group 14 index 2  [action]  resource pile
+  (14,9) uid 117 group 14 index 6  [action]  resource pile
+  (1,0) uid 118 group 14 index 8  [action]  NW random resource
+  (14,11) uid 119 group 16 index 22  [action]  sign
+  (16,8) uid 125 group 5 index 12            deco
+  (3,7) uid 126 group 5 index 14            deco
+  (19,10) uid 127 group 5 index 10            deco
+  (1,16) uid 128 group 5 index 61            deco
+  (10,16) uid 129 group 5 index 62            deco
+  (12,17) uid 130 group 5 index 65            deco
+  (11,18) uid 131 group 4 index 24            deco
+  (1,12) uid 132 group 4 index 25            deco
+  (4,12) uid 133 group 7 index 105            deco
+  (11,2) uid 134 group 7 index 106            deco
+  (10,13) uid 135 group 7 index 115            deco
+  (5,3) uid 136 group 7 index 21            deco
+  (13,20) uid 137 group 7 index 124            deco
+  (6,2) uid 138 group 5 index 66            deco
+  (5,17) uid 139 group 5 index 17            deco
+  (19,4) uid 140 group 5 index 64            deco
+  (8,1) uid 141 group 5 index 14            deco
+  (18,13) uid 142 group 4 index 24            deco
+  (12,20) uid 143 group 5 index 67            deco
+  (5,9) uid 144 group 7 index 6            deco
+  (17,1) uid 145 group 5 index 16            deco
+  (6,1) uid 146 group 4 index 21            deco
+  (62,7) uid 147 group 8 index 0            Rookhaven (basement)
+  (62,7) uid 147 group 18 index 12  [action]  Rookhaven
+  (61,7) uid 147 group 9 index 2            Rookhaven (left flag)
+  (63,7) uid 147 group 9 index 3            Rookhaven (right flag)
+  (62,8) uid 148 group 17 index 13  [action]  hero 
+  (58,4) uid 149 group 12 index 48  [action]  NE sawmill
+  (67,15) uid 150 group 12 index 30  [action]  NE ore mine
+  (55,12) uid 151 group 12 index 34  [action]  NE home gold mine
+  (55,13) uid 152 group 19 index 57  [action]  NE home gold mine guard
+  (69,3) uid 153 group 12 index 33  [action]  NE gems mine
+  (69,4) uid 154 group 19 index 14  [action]  NE gems mine guard
+  (56,17) uid 155 group 11 index 0  [action]  NE peasant hut
+  (56,19) uid 156 group 11 index 5  [action]  NE halfling hole
+  (53,8) uid 157 group 13 index 11  [action]  NE gazebo
+  (69,9) uid 158 group 13 index 6  [action]  NE fountain
+  (53,16) uid 159 group 16 index 6  [action]  NE windmill
+  (55,15) uid 160 group 16 index 24  [action]  NE water wheel
+  (69,12) uid 161 group 16 index 41  [action]  NE magic garden
+  (53,2) uid 162 group 14 index 9  [action]  treasure chest
+  (65,19) uid 163 group 14 index 9  [action]  treasure chest
+  (65,20) uid 164 group 19 index 39  [action]  NE chest guard
+  (70,20) uid 165 group 10 index 93  [action]  NE minor artifact
+  (69,20) uid 166 group 19 index 39  [action]  NE artifact guard
+  (55,2) uid 167 group 14 index 0  [action]  resource pile
+  (64,16) uid 168 group 14 index 2  [action]  resource pile
+  (57,9) uid 169 group 14 index 6  [action]  resource pile
+  (70,0) uid 170 group 14 index 8  [action]  NE random resource
+  (57,11) uid 171 group 16 index 22  [action]  sign
+  (55,8) uid 177 group 5 index 13            deco
+  (68,7) uid 178 group 5 index 15            deco
+  (52,10) uid 179 group 5 index 10            deco
+  (70,16) uid 180 group 5 index 61            deco
+  (61,16) uid 181 group 5 index 62            deco
+  (59,17) uid 182 group 5 index 65            deco
+  (60,18) uid 183 group 4 index 24            deco
+  (70,12) uid 184 group 4 index 25            deco
+  (67,12) uid 185 group 7 index 105            deco
+  (60,2) uid 186 group 7 index 106            deco
+  (61,13) uid 187 group 7 index 115            deco
+  (66,3) uid 188 group 7 index 21            deco
+  (58,20) uid 189 group 7 index 124            deco
+  (65,2) uid 190 group 5 index 66            deco
+  (66,17) uid 191 group 5 index 17            deco
+  (52,4) uid 192 group 5 index 64            deco
+  (63,1) uid 193 group 5 index 15            deco
+  (53,13) uid 194 group 4 index 24            deco
+  (59,20) uid 195 group 5 index 67            deco
+  (66,9) uid 196 group 7 index 6            deco
+  (54,1) uid 197 group 5 index 16            deco
+  (65,1) uid 198 group 4 index 21            deco
+  (9,59) uid 199 group 8 index 0            Duskmere (basement)
+  (9,59) uid 199 group 18 index 12  [action]  Duskmere
+  (8,59) uid 199 group 9 index 4            Duskmere (left flag)
+  (10,59) uid 199 group 9 index 5            Duskmere (right flag)
+  (9,60) uid 200 group 17 index 20  [action]  hero 
+  (14,58) uid 201 group 12 index 48  [action]  SW sawmill
+  (4,56) uid 202 group 12 index 5  [action]  SW ore mine
+  (18,59) uid 203 group 12 index 34  [action]  SW home gold mine
+  (18,60) uid 204 group 19 index 57  [action]  SW home gold mine guard
+  (2,68) uid 205 group 12 index 33  [action]  SW gems mine
+  (2,69) uid 206 group 19 index 14  [action]  SW gems mine guard
+  (15,54) uid 207 group 11 index 0  [action]  SW peasant hut
+  (15,52) uid 208 group 11 index 5  [action]  SW halfling hole
+  (18,63) uid 209 group 13 index 11  [action]  SW gazebo
+  (2,62) uid 210 group 13 index 6  [action]  SW fountain
+  (18,55) uid 211 group 16 index 6  [action]  SW windmill
+  (16,56) uid 212 group 16 index 24  [action]  SW water wheel
+  (2,59) uid 213 group 16 index 41  [action]  SW magic garden
+  (18,69) uid 214 group 14 index 9  [action]  treasure chest
+  (6,52) uid 215 group 14 index 9  [action]  treasure chest
+  (6,51) uid 216 group 19 index 39  [action]  SW chest guard
+  (1,51) uid 217 group 10 index 93  [action]  SW minor artifact
+  (2,51) uid 218 group 19 index 39  [action]  SW artifact guard
+  (16,69) uid 219 group 14 index 0  [action]  resource pile
+  (7,55) uid 220 group 14 index 2  [action]  resource pile
+  (14,62) uid 221 group 14 index 6  [action]  resource pile
+  (1,71) uid 222 group 14 index 8  [action]  SW random resource
+  (14,60) uid 223 group 16 index 22  [action]  sign
+  (16,63) uid 229 group 5 index 12            deco
+  (3,64) uid 230 group 5 index 14            deco
+  (19,61) uid 231 group 5 index 10            deco
+  (1,55) uid 232 group 5 index 61            deco
+  (10,55) uid 233 group 5 index 62            deco
+  (12,54) uid 234 group 5 index 65            deco
+  (11,53) uid 235 group 4 index 24            deco
+  (1,59) uid 236 group 4 index 25            deco
+  (4,59) uid 237 group 7 index 105            deco
+  (11,69) uid 238 group 7 index 106            deco
+  (5,68) uid 239 group 7 index 21            deco
+  (13,51) uid 240 group 7 index 124            deco
+  (6,69) uid 241 group 5 index 66            deco
+  (5,54) uid 242 group 5 index 17            deco
+  (19,67) uid 243 group 5 index 64            deco
+  (8,70) uid 244 group 5 index 14            deco
+  (12,51) uid 245 group 5 index 67            deco
+  (5,62) uid 246 group 7 index 6            deco
+  (17,70) uid 247 group 5 index 16            deco
+  (6,70) uid 248 group 4 index 21            deco
+  (15,50) uid 249 group 5 index 64            deco
+  (62,59) uid 250 group 8 index 0            Cinderholt (basement)
+  (62,59) uid 250 group 18 index 12  [action]  Cinderholt
+  (61,59) uid 250 group 9 index 6            Cinderholt (left flag)
+  (63,59) uid 250 group 9 index 7            Cinderholt (right flag)
+  (62,60) uid 251 group 17 index 27  [action]  hero 
+  (57,58) uid 252 group 12 index 48  [action]  SE sawmill
+  (67,56) uid 253 group 12 index 5  [action]  SE ore mine
+  (53,59) uid 254 group 12 index 34  [action]  SE home gold mine
+  (53,60) uid 255 group 19 index 57  [action]  SE home gold mine guard
+  (69,68) uid 256 group 12 index 33  [action]  SE gems mine
+  (69,69) uid 257 group 19 index 14  [action]  SE gems mine guard
+  (56,54) uid 258 group 11 index 0  [action]  SE peasant hut
+  (56,52) uid 259 group 11 index 5  [action]  SE halfling hole
+  (53,63) uid 260 group 13 index 11  [action]  SE gazebo
+  (69,62) uid 261 group 13 index 6  [action]  SE fountain
+  (53,55) uid 262 group 16 index 6  [action]  SE windmill
+  (55,56) uid 263 group 16 index 24  [action]  SE water wheel
+  (69,59) uid 264 group 16 index 41  [action]  SE magic garden
+  (53,69) uid 265 group 14 index 9  [action]  treasure chest
+  (65,52) uid 266 group 14 index 9  [action]  treasure chest
+  (65,51) uid 267 group 19 index 39  [action]  SE chest guard
+  (70,51) uid 268 group 10 index 93  [action]  SE minor artifact
+  (69,51) uid 269 group 19 index 39  [action]  SE artifact guard
+  (55,69) uid 270 group 14 index 0  [action]  resource pile
+  (64,55) uid 271 group 14 index 2  [action]  resource pile
+  (57,62) uid 272 group 14 index 6  [action]  resource pile
+  (70,71) uid 273 group 14 index 8  [action]  SE random resource
+  (57,60) uid 274 group 16 index 22  [action]  sign
+  (55,63) uid 280 group 5 index 13            deco
+  (68,64) uid 281 group 5 index 15            deco
+  (52,61) uid 282 group 5 index 10            deco
+  (70,55) uid 283 group 5 index 61            deco
+  (61,55) uid 284 group 5 index 62            deco
+  (59,54) uid 285 group 5 index 65            deco
+  (60,53) uid 286 group 4 index 24            deco
+  (70,59) uid 287 group 4 index 25            deco
+  (67,59) uid 288 group 7 index 105            deco
+  (60,69) uid 289 group 7 index 106            deco
+  (66,68) uid 290 group 7 index 21            deco
+  (58,51) uid 291 group 7 index 124            deco
+  (65,69) uid 292 group 5 index 66            deco
+  (66,54) uid 293 group 5 index 17            deco
+  (52,67) uid 294 group 5 index 64            deco
+  (63,70) uid 295 group 5 index 15            deco
+  (59,51) uid 296 group 5 index 67            deco
+  (66,62) uid 297 group 7 index 6            deco
+  (54,70) uid 298 group 5 index 16            deco
+  (65,70) uid 299 group 4 index 21            deco
+  (56,50) uid 300 group 5 index 64            deco
+  (35,4) uid 301 group 8 index 5            Ravensgate (basement)
+  (35,4) uid 301 group 18 index 3  [action]  Ravensgate
+  (34,4) uid 301 group 9 index 12            Ravensgate (left flag)
+  (36,4) uid 301 group 9 index 13            Ravensgate (right flag)
+  (35,8) uid 302 group 12 index 34  [action]  N seam gold mine
+  (35,9) uid 303 group 19 index 58  [action]  N seam gold mine guard
+  (35,12) uid 304 group 13 index 13  [action]  N mercenary camp
+  (35,15) uid 305 group 12 index 54  [action]  N alchemist lab
+  (35,16) uid 306 group 19 index 12  [action]  N alchemist lab guard
+  (35,0) uid 307 group 10 index 94  [action]  N seam major artifact
+  (36,0) uid 308 group 19 index 15  [action]  N seam artifact guard
+  (29,3) uid 309 group 12 index 31  [action]  N-west sulfur mine
+  (29,4) uid 310 group 19 index 12  [action]  N-west sulfur mine guard
+  (31,7) uid 311 group 11 index 17  [action]  N-west wagon camp
+  (27,13) uid 312 group 13 index 12  [action]  N-west witch doctor's hut
+  (29,17) uid 313 group 13 index 10  [action]  N-west fort
+  (27,5) uid 314 group 16 index 43  [action]  N-west toll tower
+  (30,13) uid 315 group 14 index 9  [action]  treasure chest
+  (31,13) uid 316 group 14 index 6  [action]  resource pile
+  (30,14) uid 317 group 19 index 58  [action]  N-west cache guard
+  (30,19) uid 318 group 10 index 92  [action]  N-west treasure artifact
+  (30,20) uid 319 group 19 index 58  [action]  N-west treasure guard
+  (27,15) uid 320 group 14 index 10  [action]  N-west campfire
+  (31,16) uid 321 group 14 index 2  [action]  resource pile
+  (31,10) uid 322 group 14 index 0  [action]  resource pile
+  (29,10) uid 323 group 16 index 22  [action]  sign
+  (28,11) uid 324 group 5 index 12            deco
+  (28,1) uid 325 group 4 index 22            deco
+  (32,2) uid 326 group 5 index 62            deco
+  (27,8) uid 327 group 5 index 67            deco
+  (30,5) uid 328 group 7 index 111            deco
+  (26,17) uid 329 group 5 index 64            deco
+  (32,15) uid 330 group 7 index 124            deco
+  (27,3) uid 331 group 5 index 17            deco
+  (42,3) uid 332 group 12 index 31  [action]  N-east sulfur mine
+  (42,4) uid 333 group 19 index 12  [action]  N-east sulfur mine guard
+  (40,7) uid 334 group 11 index 17  [action]  N-east wagon camp
+  (44,13) uid 335 group 13 index 12  [action]  N-east witch doctor's hut
+  (42,17) uid 336 group 13 index 10  [action]  N-east fort
+  (44,5) uid 337 group 16 index 43  [action]  N-east toll tower
+  (41,13) uid 338 group 14 index 9  [action]  treasure chest
+  (40,13) uid 339 group 14 index 6  [action]  resource pile
+  (41,14) uid 340 group 19 index 58  [action]  N-east cache guard
+  (41,19) uid 341 group 10 index 92  [action]  N-east treasure artifact
+  (41,20) uid 342 group 19 index 58  [action]  N-east treasure guard
+  (44,15) uid 343 group 14 index 10  [action]  N-east campfire
+  (40,16) uid 344 group 14 index 2  [action]  resource pile
+  (40,10) uid 345 group 14 index 0  [action]  resource pile
+  (42,10) uid 346 group 16 index 22  [action]  sign
+  (43,11) uid 347 group 5 index 13            deco
+  (43,1) uid 348 group 4 index 22            deco
+  (39,2) uid 349 group 5 index 62            deco
+  (38,4) uid 350 group 4 index 25            deco
+  (44,8) uid 351 group 5 index 67            deco
+  (41,5) uid 352 group 7 index 111            deco
+  (45,17) uid 353 group 5 index 64            deco
+  (39,15) uid 354 group 7 index 124            deco
+  (44,3) uid 355 group 5 index 17            deco
+  (35,67) uid 356 group 8 index 5            Ashford (basement)
+  (35,67) uid 356 group 18 index 3  [action]  Ashford
+  (34,67) uid 356 group 9 index 12            Ashford (left flag)
+  (36,67) uid 356 group 9 index 13            Ashford (right flag)
+  (35,60) uid 357 group 12 index 34  [action]  S seam gold mine
+  (35,61) uid 358 group 19 index 58  [action]  S seam gold mine guard
+  (35,57) uid 359 group 13 index 13  [action]  S mercenary camp
+  (35,54) uid 360 group 12 index 54  [action]  S alchemist lab
+  (35,55) uid 361 group 19 index 12  [action]  S alchemist lab guard
+  (35,71) uid 362 group 10 index 94  [action]  S seam major artifact
+  (36,71) uid 363 group 19 index 15  [action]  S seam artifact guard
+  (29,68) uid 364 group 12 index 31  [action]  S-west sulfur mine
+  (29,69) uid 365 group 19 index 12  [action]  S-west sulfur mine guard
+  (31,64) uid 366 group 11 index 17  [action]  S-west wagon camp
+  (27,58) uid 367 group 13 index 12  [action]  S-west witch doctor's hut
+  (29,54) uid 368 group 13 index 10  [action]  S-west fort
+  (27,66) uid 369 group 16 index 43  [action]  S-west toll tower
+  (30,58) uid 370 group 14 index 9  [action]  treasure chest
+  (31,58) uid 371 group 14 index 6  [action]  resource pile
+  (30,57) uid 372 group 19 index 58  [action]  S-west cache guard
+  (30,52) uid 373 group 10 index 92  [action]  S-west treasure artifact
+  (30,51) uid 374 group 19 index 58  [action]  S-west treasure guard
+  (27,56) uid 375 group 14 index 10  [action]  S-west campfire
+  (31,55) uid 376 group 14 index 2  [action]  resource pile
+  (31,61) uid 377 group 14 index 0  [action]  resource pile
+  (29,61) uid 378 group 16 index 22  [action]  sign
+  (28,70) uid 379 group 4 index 22            deco
+  (32,69) uid 380 group 5 index 62            deco
+  (27,61) uid 381 group 7 index 109            deco
+  (28,50) uid 382 group 5 index 64            deco
+  (27,63) uid 383 group 5 index 67            deco
+  (30,66) uid 384 group 7 index 111            deco
+  (26,54) uid 385 group 5 index 64            deco
+  (32,56) uid 386 group 7 index 124            deco
+  (27,68) uid 387 group 5 index 17            deco
+  (42,68) uid 388 group 12 index 31  [action]  S-east sulfur mine
+  (42,69) uid 389 group 19 index 12  [action]  S-east sulfur mine guard
+  (40,64) uid 390 group 11 index 17  [action]  S-east wagon camp
+  (44,58) uid 391 group 13 index 12  [action]  S-east witch doctor's hut
+  (42,54) uid 392 group 13 index 10  [action]  S-east fort
+  (44,66) uid 393 group 16 index 43  [action]  S-east toll tower
+  (41,58) uid 394 group 14 index 9  [action]  treasure chest
+  (40,58) uid 395 group 14 index 6  [action]  resource pile
+  (41,57) uid 396 group 19 index 58  [action]  S-east cache guard
+  (41,52) uid 397 group 10 index 92  [action]  S-east treasure artifact
+  (41,51) uid 398 group 19 index 58  [action]  S-east treasure guard
+  (44,56) uid 399 group 14 index 10  [action]  S-east campfire
+  (40,55) uid 400 group 14 index 2  [action]  resource pile
+  (40,61) uid 401 group 14 index 0  [action]  resource pile
+  (42,61) uid 402 group 16 index 22  [action]  sign
+  (43,70) uid 403 group 4 index 22            deco
+  (39,69) uid 404 group 5 index 62            deco
+  (44,61) uid 405 group 7 index 109            deco
+  (43,50) uid 406 group 5 index 64            deco
+  (38,67) uid 407 group 4 index 25            deco
+  (44,63) uid 408 group 5 index 67            deco
+  (41,66) uid 409 group 7 index 111            deco
+  (45,54) uid 410 group 5 index 64            deco
+  (39,56) uid 411 group 7 index 124            deco
+  (44,68) uid 412 group 5 index 17            deco
+  (6,33) uid 413 group 8 index 5            Greyfen (basement)
+  (6,33) uid 413 group 18 index 11  [action]  Greyfen
+  (5,33) uid 413 group 9 index 12            Greyfen (left flag)
+  (7,33) uid 413 group 9 index 13            Greyfen (right flag)
+  (16,35) uid 414 group 12 index 34  [action]  W seam gold mine
+  (16,36) uid 415 group 19 index 50  [action]  W seam gold mine guard
+  (11,35) uid 416 group 13 index 18  [action]  W standing stones
+  (1,35) uid 417 group 10 index 94  [action]  W seam major artifact
+  (2,36) uid 418 group 19 index 50  [action]  W seam artifact guard
+  (5,29) uid 419 group 12 index 37  [action]  W-north crystal mine
+  (5,30) uid 420 group 19 index 48  [action]  W-north crystal mine guard
+  (11,28) uid 421 group 16 index 0  [action]  W-north graveyard
+  (16,31) uid 422 group 11 index 1  [action]  W-north ruins
+  (18,32) uid 423 group 13 index 15  [action]  W-north shrine
+  (14,30) uid 424 group 13 index 20  [action]  W-north tree of knowledge
+  (13,33) uid 425 group 14 index 9  [action]  treasure chest
+  (1,31) uid 426 group 14 index 6  [action]  resource pile
+  (8,29) uid 427 group 14 index 4  [action]  resource pile
+  (19,30) uid 428 group 14 index 0  [action]  resource pile
+  (1,27) uid 429 group 14 index 10  [action]  W-north campfire
+  (11,31) uid 430 group 16 index 22  [action]  sign
+  (3,26) uid 431 group 5 index 6            deco
+  (14,27) uid 432 group 5 index 8            deco
+  (2,32) uid 433 group 4 index 24            deco
+  (12,30) uid 434 group 7 index 132            deco
+  (7,30) uid 435 group 7 index 129            deco
+  (12,31) uid 436 group 5 index 64            deco
+  (17,29) uid 437 group 5 index 10            deco
+  (11,33) uid 438 group 7 index 110            deco
+  (20,33) uid 439 group 5 index 11            deco
+  (5,42) uid 440 group 12 index 37  [action]  W-south crystal mine
+  (5,43) uid 441 group 19 index 48  [action]  W-south crystal mine guard
+  (11,43) uid 442 group 16 index 0  [action]  W-south graveyard
+  (16,40) uid 443 group 11 index 1  [action]  W-south ruins
+  (18,39) uid 444 group 13 index 15  [action]  W-south shrine
+  (14,41) uid 445 group 13 index 20  [action]  W-south tree of knowledge
+  (13,38) uid 446 group 14 index 9  [action]  treasure chest
+  (1,40) uid 447 group 14 index 6  [action]  resource pile
+  (8,42) uid 448 group 14 index 4  [action]  resource pile
+  (19,41) uid 449 group 14 index 0  [action]  resource pile
+  (1,44) uid 450 group 14 index 10  [action]  W-south campfire
+  (11,40) uid 451 group 16 index 22  [action]  sign
+  (14,44) uid 452 group 5 index 8            deco
+  (2,39) uid 453 group 4 index 24            deco
+  (12,41) uid 454 group 7 index 132            deco
+  (7,41) uid 455 group 7 index 129            deco
+  (12,40) uid 456 group 5 index 64            deco
+  (17,42) uid 457 group 5 index 10            deco
+  (11,38) uid 458 group 7 index 110            deco
+  (20,38) uid 459 group 5 index 11            deco
+  (4,37) uid 460 group 4 index 25            deco
+  (65,33) uid 461 group 8 index 5            Mirefall (basement)
+  (65,33) uid 461 group 18 index 11  [action]  Mirefall
+  (64,33) uid 461 group 9 index 12            Mirefall (left flag)
+  (66,33) uid 461 group 9 index 13            Mirefall (right flag)
+  (55,35) uid 462 group 12 index 34  [action]  E seam gold mine
+  (55,36) uid 463 group 19 index 50  [action]  E seam gold mine guard
+  (60,35) uid 464 group 13 index 18  [action]  E standing stones
+  (70,35) uid 465 group 10 index 94  [action]  E seam major artifact
+  (69,36) uid 466 group 19 index 50  [action]  E seam artifact guard
+  (66,29) uid 467 group 12 index 37  [action]  E-north crystal mine
+  (66,30) uid 468 group 19 index 48  [action]  E-north crystal mine guard
+  (60,28) uid 469 group 16 index 0  [action]  E-north graveyard
+  (55,31) uid 470 group 11 index 1  [action]  E-north ruins
+  (53,32) uid 471 group 13 index 15  [action]  E-north shrine
+  (57,30) uid 472 group 13 index 20  [action]  E-north tree of knowledge
+  (58,33) uid 473 group 14 index 9  [action]  treasure chest
+  (70,31) uid 474 group 14 index 6  [action]  resource pile
+  (63,29) uid 475 group 14 index 4  [action]  resource pile
+  (52,30) uid 476 group 14 index 0  [action]  resource pile
+  (70,27) uid 477 group 14 index 10  [action]  E-north campfire
+  (60,31) uid 478 group 16 index 22  [action]  sign
+  (68,26) uid 479 group 5 index 7            deco
+  (57,27) uid 480 group 5 index 9            deco
+  (69,32) uid 481 group 4 index 24            deco
+  (59,30) uid 482 group 7 index 132            deco
+  (64,30) uid 483 group 7 index 129            deco
+  (59,31) uid 484 group 5 index 64            deco
+  (54,29) uid 485 group 5 index 10            deco
+  (60,33) uid 486 group 7 index 110            deco
+  (51,33) uid 487 group 5 index 11            deco
+  (66,42) uid 488 group 12 index 37  [action]  E-south crystal mine
+  (66,43) uid 489 group 19 index 48  [action]  E-south crystal mine guard
+  (60,43) uid 490 group 16 index 0  [action]  E-south graveyard
+  (55,40) uid 491 group 11 index 1  [action]  E-south ruins
+  (53,39) uid 492 group 13 index 15  [action]  E-south shrine
+  (57,41) uid 493 group 13 index 20  [action]  E-south tree of knowledge
+  (58,38) uid 494 group 14 index 9  [action]  treasure chest
+  (70,40) uid 495 group 14 index 6  [action]  resource pile
+  (63,42) uid 496 group 14 index 4  [action]  resource pile
+  (52,41) uid 497 group 14 index 0  [action]  resource pile
+  (70,44) uid 498 group 14 index 10  [action]  E-south campfire
+  (60,40) uid 499 group 16 index 22  [action]  sign
+  (57,44) uid 500 group 5 index 9            deco
+  (69,39) uid 501 group 4 index 24            deco
+  (59,41) uid 502 group 7 index 132            deco
+  (64,41) uid 503 group 7 index 129            deco
+  (59,40) uid 504 group 5 index 64            deco
+  (54,42) uid 505 group 5 index 10            deco
+  (60,38) uid 506 group 7 index 110            deco
+  (51,38) uid 507 group 5 index 11            deco
+  (67,37) uid 508 group 4 index 25            deco
+  (35,34) uid 509 group 8 index 6            Kingsfall (basement)
+  (35,34) uid 509 group 18 index 0  [action]  Kingsfall
+  (34,34) uid 509 group 9 index 12            Kingsfall (left flag)
+  (36,34) uid 509 group 9 index 13            Kingsfall (right flag)
+  (29,29) uid 510 group 12 index 39  [action]  center NW cache gold mine
+  (29,30) uid 511 group 19 index 19  [action]  center NW cache gold mine guard
+  (28,30) uid 512 group 14 index 6  [action]  resource pile
+  (30,30) uid 513 group 14 index 9  [action]  treasure chest
+  (29,31) uid 514 group 10 index 92  [action]  center NW cache artifact
+  (29,26) uid 515 group 4 index 39            deco
+  (26,30) uid 516 group 5 index 64            deco
+  (30,32) uid 517 group 7 index 129            deco
+  (33,29) uid 518 group 7 index 136            deco
+  (42,29) uid 519 group 12 index 39  [action]  center NE cache gold mine
+  (42,30) uid 520 group 19 index 19  [action]  center NE cache gold mine guard
+  (41,30) uid 521 group 14 index 6  [action]  resource pile
+  (43,30) uid 522 group 14 index 9  [action]  treasure chest
+  (42,31) uid 523 group 10 index 92  [action]  center NE cache artifact
+  (42,26) uid 524 group 4 index 39            deco
+  (45,30) uid 525 group 5 index 64            deco
+  (41,32) uid 526 group 7 index 129            deco
+  (38,29) uid 527 group 7 index 136            deco
+  (29,42) uid 528 group 12 index 39  [action]  center SW cache gold mine
+  (29,43) uid 529 group 19 index 19  [action]  center SW cache gold mine guard
+  (28,43) uid 530 group 14 index 6  [action]  resource pile
+  (30,43) uid 531 group 14 index 9  [action]  treasure chest
+  (29,44) uid 532 group 10 index 92  [action]  center SW cache artifact
+  (29,45) uid 533 group 4 index 39            deco
+  (26,41) uid 534 group 5 index 64            deco
+  (30,39) uid 535 group 7 index 129            deco
+  (33,42) uid 536 group 7 index 136            deco
+  (42,42) uid 537 group 12 index 39  [action]  center SE cache gold mine
+  (42,43) uid 538 group 19 index 19  [action]  center SE cache gold mine guard
+  (41,43) uid 539 group 14 index 6  [action]  resource pile
+  (43,43) uid 540 group 14 index 9  [action]  treasure chest
+  (42,44) uid 541 group 10 index 92  [action]  center SE cache artifact
+  (42,45) uid 542 group 4 index 39            deco
+  (45,41) uid 543 group 5 index 64            deco
+  (41,39) uid 544 group 7 index 129            deco
+  (38,42) uid 545 group 7 index 136            deco
+  (32,26) uid 546 group 16 index 32  [action]  N trading post
+  (32,45) uid 547 group 16 index 32  [action]  S trading post
+  (30,36) uid 548 group 16 index 3  [action]  W hill fort
+  (41,36) uid 549 group 16 index 3  [action]  E hill fort
+  (30,33) uid 550 group 4 index 29            deco
+  (34,38) uid 551 group 7 index 132            deco
+  (31,30) uid 552 group 7 index 137            deco
+  (28,39) uid 553 group 5 index 10            deco
+  (33,41) uid 554 group 4 index 27            deco
+  (41,33) uid 555 group 4 index 29            deco
+  (37,38) uid 556 group 7 index 132            deco
+  (40,30) uid 557 group 7 index 137            deco
+  (43,39) uid 558 group 5 index 10            deco
+  (38,41) uid 559 group 4 index 27            deco
+  (25,31) uid 968 group 7 index 129            ridge decor
+  (46,31) uid 969 group 7 index 129            ridge decor
+  (25,40) uid 970 group 7 index 129            ridge decor
+  (46,40) uid 971 group 7 index 129            ridge decor
+  (25,45) uid 972 group 5 index 68            ridge decor
+  (46,45) uid 973 group 5 index 68            ridge decor
+  (25,71) uid 974 group 7 index 133            ridge decor
+  (46,71) uid 975 group 7 index 133            ridge decor
+  (1,49) uid 976 group 7 index 141            ridge decor
+  (1,50) uid 977 group 4 index 27            ridge decor
+  (16,24) uid 978 group 5 index 11            ridge decor
+  (18,25) uid 979 group 7 index 132            ridge decor
+  (26,25) uid 980 group 4 index 36            ridge decor
+  (26,46) uid 981 group 4 index 36            ridge decor
+  (30,50) uid 982 group 5 index 67            ridge decor
+  (32,22) uid 983 group 5 index 11            ridge decor
+  (32,49) uid 984 group 5 index 11            ridge decor
+  (39,22) uid 985 group 5 index 11            ridge decor
+  (39,49) uid 986 group 5 index 11            ridge decor
+  (41,50) uid 987 group 5 index 67            ridge decor
+  (45,25) uid 988 group 4 index 36            ridge decor
+  (45,46) uid 989 group 4 index 36            ridge decor
+  (53,25) uid 990 group 7 index 132            ridge decor
+  (55,24) uid 991 group 5 index 11            ridge decor
+  (70,49) uid 992 group 7 index 141            ridge decor
+  (70,50) uid 993 group 4 index 27            ridge decor
+  (23,6) uid 994 group 19 index 14  [action]  NW pass A guard
+  (9,23) uid 995 group 19 index 48  [action]  NW pass B guard
+  (48,6) uid 996 group 19 index 14  [action]  NE pass A guard
+  (62,23) uid 997 group 19 index 48  [action]  NE pass B guard
+  (23,64) uid 998 group 19 index 14  [action]  SW pass A guard
+  (9,48) uid 999 group 19 index 48  [action]  SW pass B guard
+  (48,64) uid 1000 group 19 index 14  [action]  SE pass A guard
+  (62,48) uid 1001 group 19 index 48  [action]  SE pass B guard
+  (35,23) uid 1002 group 19 index 16  [action]  N gate guard
+  (35,48) uid 1003 group 19 index 16  [action]  S gate guard
+  (23,35) uid 1004 group 19 index 33  [action]  W gate guard
+  (48,35) uid 1005 group 19 index 33  [action]  E gate guard
+placed objects: 604
+=== guard-sealed reachability (action objects each hero reaches without any fight; engine protection rule) ===
+--- hero at (9,8) ---
+  (9,7) Harrowfield
+  (9,8) hero 
+  (13,4) NW sawmill
+  (4,15) NW ore mine
+  (15,17) NW peasant hut
+  (15,19) NW halfling hole
+  (18,8) NW gazebo
+  (2,9) NW fountain
+  (18,16) NW windmill
+  (16,15) NW water wheel
+  (2,12) NW magic garden
+  (18,2) treasure chest
+  (16,2) resource pile
+  (7,16) resource pile
+  (14,9) resource pile
+  (1,0) NW random resource
+  (14,11) sign
+guard-sealed reachable action objects: 17
+--- hero at (62,8) ---
+  (62,7) Rookhaven
+  (62,8) hero 
+  (58,4) NE sawmill
+  (67,15) NE ore mine
+  (56,17) NE peasant hut
+  (56,19) NE halfling hole
+  (53,8) NE gazebo
+  (69,9) NE fountain
+  (53,16) NE windmill
+  (55,15) NE water wheel
+  (69,12) NE magic garden
+  (53,2) treasure chest
+  (55,2) resource pile
+  (64,16) resource pile
+  (57,9) resource pile
+  (70,0) NE random resource
+  (57,11) sign
+guard-sealed reachable action objects: 17
+--- hero at (9,60) ---
+  (9,59) Duskmere
+  (9,60) hero 
+  (14,58) SW sawmill
+  (4,56) SW ore mine
+  (15,54) SW peasant hut
+  (15,52) SW halfling hole
+  (18,63) SW gazebo
+  (2,62) SW fountain
+  (18,55) SW windmill
+  (16,56) SW water wheel
+  (2,59) SW magic garden
+  (18,69) treasure chest
+  (16,69) resource pile
+  (7,55) resource pile
+  (14,62) resource pile
+  (1,71) SW random resource
+  (14,60) sign
+guard-sealed reachable action objects: 17
+--- hero at (62,60) ---
+  (62,59) Cinderholt
+  (62,60) hero 
+  (57,58) SE sawmill
+  (67,56) SE ore mine
+  (56,54) SE peasant hut
+  (56,52) SE halfling hole
+  (53,63) SE gazebo
+  (69,62) SE fountain
+  (53,55) SE windmill
+  (55,56) SE water wheel
+  (69,59) SE magic garden
+  (53,69) treasure chest
+  (55,69) resource pile
+  (64,55) resource pile
+  (57,62) resource pile
+  (70,71) SE random resource
+  (57,60) sign
+guard-sealed reachable action objects: 17
+reachability: all action objects reachable from Blue start
+saved: C:/Users/gjoer/AppData/Local/Temp/claude/C--Users-gjoer-source-repos-MyGameMods/2994bea8-c4c1-4f53-83ad-f05e711aa15a/scratchpad/ashen_succession.fh2m
+round-trip load: OK (version 13, width 72, tiles 5184)
+round-trip byte comparison: IDENTICAL
+  free: Harrowfield (9,7)
+  free: hero  (9,8)
+  free: NW sawmill (13,4)
+  free: NW ore mine (4,15)
+  free: NW peasant hut (15,17)
+  free: NW halfling hole (15,19)
+  free: NW gazebo (18,8)
+  free: NW fountain (2,9)
+  free: NW windmill (18,16)
+  free: NW water wheel (16,15)
+  free: NW magic garden (2,12)
+  free: treasure chest (18,2)
+  free: resource pile (16,2)
+  free: resource pile (7,16)
+  free: resource pile (14,9)
+  free: NW random resource (1,0)
+  free: sign (14,11)
+sealed check NW: 17 free objects
+  free: Rookhaven (62,7)
+  free: hero  (62,8)
+  free: NE sawmill (58,4)
+  free: NE ore mine (67,15)
+  free: NE peasant hut (56,17)
+  free: NE halfling hole (56,19)
+  free: NE gazebo (53,8)
+  free: NE fountain (69,9)
+  free: NE windmill (53,16)
+  free: NE water wheel (55,15)
+  free: NE magic garden (69,12)
+  free: treasure chest (53,2)
+  free: resource pile (55,2)
+  free: resource pile (64,16)
+  free: resource pile (57,9)
+  free: NE random resource (70,0)
+  free: sign (57,11)
+sealed check NE: 17 free objects
+  free: Duskmere (9,59)
+  free: hero  (9,60)
+  free: SW sawmill (14,58)
+  free: SW ore mine (4,56)
+  free: SW peasant hut (15,54)
+  free: SW halfling hole (15,52)
+  free: SW gazebo (18,63)
+  free: SW fountain (2,62)
+  free: SW windmill (18,55)
+  free: SW water wheel (16,56)
+  free: SW magic garden (2,59)
+  free: treasure chest (18,69)
+  free: resource pile (16,69)
+  free: resource pile (7,55)
+  free: resource pile (14,62)
+  free: SW random resource (1,71)
+  free: sign (14,60)
+sealed check SW: 17 free objects
+  free: Cinderholt (62,59)
+  free: hero  (62,60)
+  free: SE sawmill (57,58)
+  free: SE ore mine (67,56)
+  free: SE peasant hut (56,54)
+  free: SE halfling hole (56,52)
+  free: SE gazebo (53,63)
+  free: SE fountain (69,62)
+  free: SE windmill (53,55)
+  free: SE water wheel (55,56)
+  free: SE magic garden (69,59)
+  free: treasure chest (53,69)
+  free: resource pile (55,69)
+  free: resource pile (64,55)
+  free: resource pile (57,62)
+  free: SE random resource (70,71)
+  free: sign (57,60)
+sealed check SE: 17 free objects
+=== fairness: movement cost from each castle (engine rules, fights ignored) ===
+  pass A guard: NW=1623 NE=1623 SW=1523 SE=1523  spread=100
+  pass B guard: NW=1225 NE=1225 SW=1386 SE=1386  spread=161
+  own sawmill: NW=850 NE=850 SW=700 SE=700  spread=150
+  own ore mine: NW=1050 NE=1050 SW=825 SE=825  spread=225
+  home gold guard: NW=987 NE=987 SW=1100 SE=1100  spread=113
+  N/S toll town gate: NW=2485 NE=2560 SW=2548 SE=2535  spread=75
+  W/E toll town gate: NW=2349 NE=2349 SW=2585 SE=2585  spread=236
+  N/S seam gold guard: NW=2698 NE=2773 SW=2573 SE=2648  spread=200
+  N/S seam artifact: NW=2923 NE=2998 SW=2798 SE=2760  spread=238
+  W/E seam gold guard: NW=2762 NE=2762 SW=2848 SE=2848  spread=86
+  N/S gate guard: NW=3585 NE=3622 SW=3472 SE=3509  spread=150
+  W/E gate guard: NW=3274 NE=3274 SW=3422 SE=3422  spread=148
+  Kingsfall gate: NW=4174 NE=4249 SW=4322 SE=4397  spread=223
+  own centre cache guard: NW=4249 NE=4261 SW=4359 SE=4471  spread=222
+fairness: worst spread 238 move points (N/S seam artifact)

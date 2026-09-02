@@ -8,11 +8,13 @@
 #include "mapgen.h"
 
 void buildKingsRansom( MapBuilder & b ); // kings_ransom_map.cpp
+void buildAshenSuccession( MapBuilder & b ); // ashen_succession_map.cpp
 
 const std::vector<MapDefinition> & getMapRegistry()
 {
     static const std::vector<MapDefinition> registry = {
         { "kings_ransom", "The King's Ransom", 36, 20260901U, buildKingsRansom },
+        { "ashen_succession", "The Ashen Succession", 72, 20260901U, buildAshenSuccession },
         // Add new maps here.
     };
     return registry;

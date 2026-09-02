@@ -297,6 +297,7 @@
     <ClCompile Include="$(Fheroes2Root)\src\fheroes2\world\world_pathfinding.cpp" />
     <ClCompile Include="$(Fheroes2Root)\src\fheroes2\world\world_regions.cpp" />
     <ClCompile Include="$(Fheroes2Root)\src\thirdparty\libsmacker\smacker.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\ashen_succession_map.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\kings_ransom_map.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\map_registry.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\mapgen_main.cpp" />

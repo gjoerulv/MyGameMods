@@ -1,0 +1,37 @@
+Reference armies (engine strength units):
+  Knight       week 2:     514  week 3:    1014  month 2:    2181  month 2 late:    3349  week 1:     161
+  Barbarian    week 2:     617  week 3:    1218  month 2:    2679  month 2 late:    4140  week 1:     211
+  Sorceress    week 2:     568  week 3:    1103  month 2:    2392  month 2 late:    3681  week 1:     176
+  Warlock      week 2:     707  week 3:    1313  month 2:    2964  month 2 late:    4614  week 1:     242
+  Wizard       week 2:     598  week 3:    1132  month 2:    2307  month 2 late:    3483  week 1:     175
+  Necromancer  week 2:     578  week 3:    1094  month 2:    2381  month 2 late:    3667  week 1:     159
+
+Guards (base strength -> with neutral growth at the checkpoint; ratio guard/reference per race; flag on the worst race):
+  OK   home gold mine guard (28 Rogue)                  141 ->    141 @week 1       Knig=0.87 Barb=0.67 Sorc=0.80 Warl=0.58 Wiza=0.80 Necr=0.89
+  OK   gems mine guard (6 Wolf)                         133 ->    133 @week 1       Knig=0.83 Barb=0.63 Sorc=0.75 Warl=0.55 Wiza=0.76 Necr=0.84
+  OK   chest guard (10 Boar)                            115 ->    115 @week 1       Knig=0.71 Barb=0.54 Sorc=0.65 Warl=0.47 Wiza=0.65 Necr=0.72
+  OK   artifact guard (20 Boar)                         229 ->    262 @week 2       Knig=0.51 Barb=0.42 Sorc=0.46 Warl=0.37 Wiza=0.44 Necr=0.45
+  OK   seam gold mine guard (30 Nomad)                  552 ->    721 @week 3       Knig=0.71 Barb=0.59 Sorc=0.65 Warl=0.55 Wiza=0.64 Necr=0.66
+  LOW  alchemist lab guard (50 Orc)                     450 ->    588 @week 3       Knig=0.58 Barb=0.48 Sorc=0.53 Warl=0.45 Wiza=0.52 Necr=0.54
+  OK   seam artifact guard (25 Ogre)                    608 ->    794 @week 3       Knig=0.78 Barb=0.65 Sorc=0.72 Warl=0.60 Wiza=0.70 Necr=0.73
+  OK   sulfur mine guard (25 Orc)                       225 ->    257 @week 2       Knig=0.50 Barb=0.42 Sorc=0.45 Warl=0.36 Wiza=0.43 Necr=0.45
+  OK   cache guard (15 Nomad)                           276 ->    316 @week 2       Knig=0.61 Barb=0.51 Sorc=0.56 Warl=0.45 Wiza=0.53 Necr=0.55
+  OK   treasure guard (25 Nomad)                        460 ->    601 @week 3       Knig=0.59 Barb=0.49 Sorc=0.54 Warl=0.46 Wiza=0.53 Necr=0.55
+  OK   seam gold mine guard (30 Mummy)                  544 ->    710 @week 3       Knig=0.70 Barb=0.58 Sorc=0.64 Warl=0.54 Wiza=0.63 Necr=0.65
+  OK   seam artifact guard (30 Mummy)                   544 ->    710 @week 3       Knig=0.70 Barb=0.58 Sorc=0.64 Warl=0.54 Wiza=0.63 Necr=0.65
+  OK   crystal mine guard (30 Zombie)                   235 ->    269 @week 2       Knig=0.52 Barb=0.44 Sorc=0.47 Warl=0.38 Wiza=0.45 Necr=0.47
+  OK   cache gold mine guard (8 Cyclops)               1102 ->   1879 @month 2      Knig=0.86 Barb=0.70 Sorc=0.79 Warl=0.63 Wiza=0.81 Necr=0.79
+  OK   pass A guard (14 Wolf)                           310 ->    354 @week 2       Knig=0.69 Barb=0.57 Sorc=0.62 Warl=0.50 Wiza=0.59 Necr=0.61
+  OK   pass B guard (30 Zombie)                         235 ->    269 @week 2       Knig=0.52 Barb=0.44 Sorc=0.47 Warl=0.38 Wiza=0.45 Necr=0.47
+  OK   gate guard (25 Ogre Lord)                       1020 ->   1740 @month 2      Knig=0.80 Barb=0.65 Sorc=0.73 Warl=0.59 Wiza=0.75 Necr=0.73
+  OK   gate guard (22 Minotaur King)                   1023 ->   1744 @month 2      Knig=0.80 Barb=0.65 Sorc=0.73 Warl=0.59 Wiza=0.76 Necr=0.73
+
+Garrisons (with expected neutral-town joins up to the checkpoint):
+  OK   Ravensgate                                      1652 ->   1858 @month 2      Knig=0.85 Barb=0.69 Sorc=0.78 Warl=0.63 Wiza=0.81 Necr=0.78
+  OK   Ashford                                         1652 ->   1858 @month 2      Knig=0.85 Barb=0.69 Sorc=0.78 Warl=0.63 Wiza=0.81 Necr=0.78
+  OK   Greyfen                                         1774 ->   1992 @month 2      Knig=0.91 Barb=0.74 Sorc=0.83 Warl=0.67 Wiza=0.86 Necr=0.84
+  OK   Mirefall                                        1774 ->   1992 @month 2      Knig=0.91 Barb=0.74 Sorc=0.83 Warl=0.67 Wiza=0.86 Necr=0.84
+  OK   Kingsfall                                       2908 ->   2908 @month 2 late Knig=0.87 Barb=0.70 Sorc=0.79 Warl=0.63 Wiza=0.83 Necr=0.79
+
+Bands: week 1 0.30-0.90, week 2 0.35-0.70, week 3 0.45-0.80, month 2 0.55-0.95, month 2 late 0.55-1.30, pocket 0.00-0.45
+AI attacks a neutral only above 1.5x its strength (castles: garrison x1.25 tower/melee factor x1.5).
