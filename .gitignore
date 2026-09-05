@@ -12,7 +12,7 @@
 *.env
 
 validation/*
-.claude
+.claude/settings.local.json
 .localDocs
 
 # User-specific files (MonoDevelop/Xamarin Studio)

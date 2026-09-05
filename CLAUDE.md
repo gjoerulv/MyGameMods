@@ -8,9 +8,9 @@ A workspace for authoring native fheroes2 maps (`.fh2m`) for Heroes of Might and
 
 ## External dependency (required, not in this repo)
 
-- fheroes2 clone at `C:\Users\gjoer\source\repos\fheroes2` — validated at commit `b086d1aa8b921163712aec2fb8188f4d0d375b09`. Treat the engine source as the format specification; when any document here disagrees with the source, the source wins. Do not modify the clone.
+- fheroes2 clone at `C:\Users\gjoer\source\repos\fheroes2` — validated at commit `d778cb44b30e4fcf81ee70ccf96354b355c81c4f` (2026-09-04; pinned 2026-09-05). Treat the engine source as the format specification; when any document here disagrees with the source, the source wins. Never edit files in the clone; only the `check_updates` skill moves its checkout (fast-forward after a green rebuild and identical map hashes).
 - The clone's prebuilt deps must exist (`VisualStudio/packages/`, created by `script/windows/install_packages.bat`).
-- Installed game: fheroes2 release 1.1.17 with full HoMM2 assets; it reads/writes the same format v13 as the pinned commit.
+- Installed game: fheroes2 release 1.1.17 (`D:\Spill\Homm2\fheroes2_windows_x64_SDL2\fheroes2.exe`) with full HoMM2 assets; it reads/writes the same format v13 as the pinned commit (`map_format_info.*` is byte-identical between the 1.1.17 tag and the pin).
 
 ## Commands
 
@@ -48,5 +48,6 @@ There is no test suite; the `generate` + `gameload` output *is* the test. Instal
 
 - `research_fh2m_and_homm2_design.md` — condensed engine ledger: format byte layout, object-table indices, placement recipes, economy numbers, AI behavior. Full tables with `file:line` citations in `research/notes/01..11_*.md`.
 - `.claude/skills/homm2-map-maker/SKILL.md` — the workflow for creating a **new** map (interview → approved plan → implement → validate) plus the map-authoring gotchas. Use the skill for new maps instead of improvising.
-- `kings_ransom_map.cpp` / `kings_ransom_design.md` / `kings_ransom_validation.md` — the worked example of a finished map and its documentation shape.
+- `.claude/skills/check_updates/SKILL.md` — the maintenance workflow: detect upstream fheroes2 changes, re-validate mapgen and every registered map, re-pin, sync these docs, and harvest lessons from finished maps into them. `research/upstream_log.md` lists every check.
+- `kings_ransom_map.cpp` / `kings_ransom_design.md` / `kings_ransom_validation.md` — the worked example of a finished map and its documentation shape. `ashen_succession_*` is the mirrored four-player counterpart.
 - `.localDocs/` — third-party community maps for reference only; never redistribute or copy them.

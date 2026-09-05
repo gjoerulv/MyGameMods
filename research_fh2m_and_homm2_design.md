@@ -19,12 +19,13 @@ what the generator consumes plus pointers.
 
 | Field | Value |
 |---|---|
-| Research/implementation commit | `b086d1aa8b921163712aec2fb8188f4d0d375b09` — verified upstream `HEAD`; local clone `C:/Users/gjoer/source/repos/fheroes2` fast-forwarded to it |
+| Research commit (note stamps, `file:line` citations) | `b086d1aa8b921163712aec2fb8188f4d0d375b09` (2026-09-01) — each note header names the commit at which that note was last verified |
+| Current pin (clone checkout, mapgen validated) | `d778cb44b30e4fcf81ee70ccf96354b355c81c4f` (2026-09-04), pinned 2026-09-05 with identical map hashes; every later check is one row in `research/upstream_log.md` |
 | Ledger compiled | 2026-09-01, Windows 11 Pro 10.0.26200 |
-| Installed game | release **1.1.17**, tag `2685c2188b541660f1ce261b554c3e92f79b1775`, **72 commits behind HEAD** |
+| Installed game | release **1.1.17** (`D:\Spill\Homm2\fheroes2_windows_x64_SDL2\fheroes2.exe`), tag `2685c2188b541660f1ce261b554c3e92f79b1775`, **79 commits behind the pin** |
 
-**Compatibility.** `git diff 1.1.17 HEAD -- src/fheroes2/maps/map_format_info.{h,cpp}`
-= 0 lines — serializer byte-identical (notes/01 §8). Both revisions:
+**Compatibility.** `git diff 1.1.17 d778cb44 -- src/fheroes2/maps/map_format_info.{h,cpp}`
+= 0 lines — serializer byte-identical (notes/01 §8; re-checked 2026-09-05). Both revisions:
 `minimumSupportedVersion=2`, `currentSupportedVersion=13`; save always writes
 current version regardless of `map.version`. v13 shipped since 1.1.14. **A map
 this generator writes (v13) loads correctly in both the installed 1.1.17 binary

@@ -85,3 +85,5 @@ mapgen\build\x64\Release\mapgen.exe inspect  kings_ransom.fh2m                # 
 (The tool now takes a map name from `mapgen/src/map_registry.cpp`; the old
 `generate <out.fh2m>` form still works and builds `kings_ransom`. The registry
 refactor was hash-verified to produce a byte-identical map.)
+
+Re-validated at `d778cb44b30e4fcf81ee70ccf96354b355c81c4f` (2026-09-05): SHA-256 identical.

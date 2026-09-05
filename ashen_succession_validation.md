@@ -95,3 +95,5 @@ mapgen\build\x64\Release\mapgen.exe inspect  ashen_succession.fh2m              
 mapgen\build\x64\Release\mapgen.exe strength ashen_succession > strength.txt          # guard/garrison strengths
 python mapgen\guard_model.py strength.txt                                             # calibration bands
 ```
+
+Re-validated at `d778cb44b30e4fcf81ee70ccf96354b355c81c4f` (2026-09-05): SHA-256 identical.
